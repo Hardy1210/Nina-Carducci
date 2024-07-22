@@ -27,19 +27,50 @@ body {
 	list-style-type: none;
 	font-size: 14px;
 	margin-bottom: 0;
+	gap: 25px;
 }
-
+/*Ajout d'effet hover au nav*/
 .nav li {
-	padding-inline: 10px;
+	position: relative;
 }
 
+.nav .link::after {
+	content: '';
+	position: absolute;
+	left: 50%;
+	bottom: 1px;
+	width: 0;
+	height: 1px;
+	background-color: currentColor;
+	transition:
+	  width 0.2s ease-in-out,
+	  left 0.2s ease-in-out;
+	transform: translateX(
+	  -50%
+	); /* Centrar el punto de inicio del pseudo-elemento */
+  }
+
+  .nav .link:hover::after {
+	width: 100%;
+	left: 50%;
+	transform: translateX(
+	  -50%
+	); /* Mantener centrado el subrayado durante la expansión */
+  }
+
+  .nav .link:not(:hover)::after {
+	width: 0;
+	left: 50%;
+	transform: translateX(-50%);
+  }
+/*-------------------------------*/
 .nav a {
 	text-decoration: none;
 	color: #000
 }
 
 .social-link img {
-	width: 20px;
+	width: 19px;
 }
 
 #about {
@@ -77,6 +108,7 @@ body {
 .about-me__title {
 	margin-top: 1em;
 	margin-bottom: 60px;
+	
 	font-size: 30px;
 }
 .about-me__introduction {
@@ -91,7 +123,7 @@ body {
 }
 
 #gallery {
-	/*	min-height: 100vh; */
+	/*min-height: 100vh;*/ 
 }
 .title{
 	text-align: center;
@@ -126,6 +158,9 @@ body {
 	object-fit: cover;
 	padding: .5em;
 }
+.gallery img {
+	width: 500px;
+}
 .mg-prev, .mg-next {
 	width: 30px;
 	height: 30px;
@@ -144,13 +179,13 @@ body {
 	padding-block: 3em;
 }
 .quote__text {
-	font-family: Spectral;
+	font-family: 'Spectral';
 	font-style: italic;
 	font-weight: 300;
 
 }
 .quote__author {
-	font-family: Spectral;
+	font-family: 'Spectral';
 	font-weight: 800;
 	font-size: 22px;
 }
