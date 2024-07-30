@@ -103,11 +103,15 @@ body {
 
 }
 #about-me {
-	flex: 2
+	flex: 2;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .about-me__title {
 	margin-top: 1em;
-	margin-bottom: 60px;
+	margin-bottom: 30px;
 	
 	font-size: 30px;
 }
@@ -117,10 +121,16 @@ body {
 	font-style: italic;
 	width: 60%;
 	font-size: 1em;
+	text-align: justify;
+	margin-bottom: 15px;
 }
 #about-me p {
 	width: 80%;
-	font-size: 14px;
+	font-size: 18px;
+	text-align: justify;
+	font-family: 'Spectral';
+	font-style: italic;
+	line-height: 1.2em;
 }
 
 #gallery {
@@ -139,7 +149,8 @@ body {
 	border-radius:0 ;
 }
 .nav-pills .nav-link {
-	color: #000
+	color: #000;
+	cursor: pointer;
 }
 .item-column {
 	position: relative;
@@ -362,7 +373,7 @@ input[type="submit"] {
 	}
 	.top-header .nav, .top-header .nav ul {
 		width: 100%;
-		padding: 0 0 0 0;
+		padding: 0 0 0 10px;
 	}
 	.top-header .nav li {
 		flex: 1;
