@@ -142,6 +142,7 @@ body {
 }
 .gallery .nav {
 	justify-content: center;
+	font-size: 1.15em;
 }
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
 	color: #fff;
